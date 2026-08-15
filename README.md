@@ -14,7 +14,7 @@ Welcome to the tutorial series for the **`cognition`** library. This repository 
 
 ## 📚 Tutorial Roadmap
 
-This repository is organized into four sequential tutorials that guide you from core state-machine concepts to advanced multi-level agent architectures:
+This repository is organized into four sequential tutorials that guide you from core concepts to advanced agent architectures:
 
 ### ⚙️ Tutorial 1: Decision Processes
 * **Core Concepts**: `DecisionProcess`, `State`, `Operator`, terminaton check,
