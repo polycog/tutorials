@@ -25,7 +25,7 @@ This repository is organized into four sequential tutorials that guide you from 
 * **Key Focus**: Wrapping a decision process into a `Cogent` instance. Learn how to interface an agent with external environments by creating strongly typed `Sensor` (telemetry ingestion) and `Actuator` (command dispatch) components.
 
 ### 💬 Tutorial 3: Human-Cogent Communication
-* **Core Concepts**: `Utterance`, `AutoDocEnum`, `EnumClassifier`, Separation of Intent Interpretation and Exacution.
+* **Core Concepts**: `Utterance`, `AutoDocEnum`, `EnumClassifier`, Separation of Intent Interpretation and Execution.
 * **Key Focus**: Connecting conversational interfaces (Chat UIs) to an agent. Convert raw, unstructured text into strongly typed enum intents using `EnumClassifier` (built on `pydantic_ai`). Enforce a whitelist security architecture and implement explicit fallback handling for unmapped user inputs.
 
 ### 🏗️ Tutorial 4: Hierarchical Decision Processes
