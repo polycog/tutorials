@@ -31,7 +31,7 @@ This repository is organized into four sequential tutorials that guide you from 
 * **Core Concepts**: Nested `DecisionProcess`
 * **Key Focus**: Scaling agents to complex tasks. Learn how to nest child `DecisionProcess` instances inside parent `Operator` classes to decompose complex tasks (e.g., two-stage verb/noun intent parsing) into modular, isolated sub-loops.
 
-### 🌐 Tutorial 5: World Graphs
+### 🌐 Tutorial 5: World Model
 * **Core Concepts**: `WorldGraph`, `describe_facts`, Relational State Representation, Graph Topology, Graph-based Reasoning
 
 * **Key Focus**: Extending state management with graph-based world models. Learn how to construct, query, and dynamically update a `WorldGraph` representing multi-room topology, entity connections, and device hierarchies. Utilize the `describe_facts` function to serialize graph triples and relational knowledge into structured text prompts, enabling grounded response generatior.
