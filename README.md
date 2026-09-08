@@ -58,10 +58,10 @@ The smart home simulation server runs as an external service that your agent con
 ```
 .
 ├── README.md                                       # Main repository documentation
-├── tutorial_1_decision_processes.ipynb             # Tutorial 1: State, Operators, & Decision Process mechanics
-├── tutorial_2_cogents.ipynb                        # Tutorial 2: Sensors, Actuators, & Perceive-Decide-Act loops
-├── tutorial_3_human_cogent_communication.ipynb     # Tutorial 3: Chat UIs, NLU enums, & Intent parsing
-├── tutorial_4_hierarchical_decision_processes.ipynb# Tutorial 4: Nested sub-processes & multi-room state
+├── 01_decision_processes.ipynb             # Tutorial 1: State, Operators, & Decision Process mechanics
+├── 02_cogents.ipynb                        # Tutorial 2: Sensors, Actuators, & Perceive-Decide-Act loops
+├── 03_human_cogent_communication.ipynb     # Tutorial 3: Chat UIs, NLU enums, & Intent parsing
+├── 04_hierarchical_decision_processes.ipynb# Tutorial 4: Nested sub-processes & multi-room state
 ├── smart_home_assistant_v1.py                      # Tutorial 1: Basic deterministic device control script
 ├── smart_home_assistant_v2.py                      # Tutorial 2: Full Cogent integration with I/O containers script
 ├── smart_home_assistant_v3.py                      # Tutorial 3: Chat interface & NLU classifier script
