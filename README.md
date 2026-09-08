@@ -1,7 +1,6 @@
 # `cognition` Smart Home Tutorial Series
 
-Welcome to the tutorial series for the **`cognition`** library. This repository contains step-by-step guides, interactive Jupyter Notebooks, and complete Python reference implementations for building trustworthy AI agents.
-
+Welcome to the tutorial series for the **`cognition`** library. This repository contains step-by-step guides, interactive Jupyter Notebooks, and complete Python reference implementations.
 ---
 
 ## 📌 Overview
@@ -14,22 +13,22 @@ Welcome to the tutorial series for the **`cognition`** library. This repository 
 
 ## 📚 Tutorial Roadmap
 
-This repository is organized into four sequential tutorials that guide you from core state-machine concepts to advanced multi-level agent architectures:
+This repository is organized into four sequential tutorials that guide you from core concepts to advanced agent architectures:
 
 ### ⚙️ Tutorial 1: Decision Processes
-* **Core Concepts**: `DecisionProcess`, `State`, `Operator`, terminaton check,
-* **Key Focus**: Building deterministic decision processes using `Operator` classes with explicit guard conditions (`can_perform`) and handlers (`perform`). Learn how operators inspect and update internal `State`.
+* **Core Concepts**: `DecisionProcess`, `State`, `Operator`, termination check
+* **Key Focus**: Building deterministic decision processes using `Operator` classes with explicit guard conditions (`can_perform`) and handlers (`perform`). Learn how operators inspect and update internal `State` and how terminal checks conclude the process.
 
-### 🤖 Tutorial 2: Cogents
+### 🤖 Tutorial 2: Cogents (Cognitive Agents)
 * **Core Concepts**: `Cogent`, `Sensor`, `Actuator`, Perceive–Decide–Act Loop, `IOContainer`
 * **Key Focus**: Wrapping a decision process into a `Cogent` instance. Learn how to interface an agent with external environments by creating strongly typed `Sensor` (telemetry ingestion) and `Actuator` (command dispatch) components.
 
 ### 💬 Tutorial 3: Human-Cogent Communication
-* **Core Concepts**: `Utterance`, `AutoDocEnum`, `EnumClassifier`, Separation of Intent Interpretation and Exacution.
+* **Core Concepts**: `AutoDocEnum`, `EnumClassifier`, Utterance vs Intent, Separation of Intent Interpretation and Execution
 * **Key Focus**: Connecting conversational interfaces (Chat UIs) to an agent. Convert raw, unstructured text into strongly typed enum intents using `EnumClassifier` (built on `pydantic_ai`). Enforce a whitelist security architecture and implement explicit fallback handling for unmapped user inputs.
 
 ### 🏗️ Tutorial 4: Hierarchical Decision Processes
-* **Core Concepts**: Nested `DecisionProcess`.
+* **Core Concepts**: Nested `DecisionProcess`
 * **Key Focus**: Scaling agents to complex tasks. Learn how to nest child `DecisionProcess` instances inside parent `Operator` classes to decompose complex tasks (e.g., two-stage verb/noun intent parsing) into modular, isolated sub-loops.
 
 ---
@@ -59,10 +58,10 @@ The smart home simulation server runs as an external service that your agent con
 ```
 .
 ├── README.md                                       # Main repository documentation
-├── tutorial_1_decision_processes.ipynb             # Tutorial 1: State, Operators, & Decision Process mechanics
-├── tutorial_2_cogents.ipynb                        # Tutorial 2: Sensors, Actuators, & Perceive-Decide-Act loops
-├── tutorial_3_human_cogent_communication.ipynb     # Tutorial 3: Chat UIs, NLU enums, & Intent parsing
-├── tutorial_4_hierarchical_decision_processes.ipynb# Tutorial 4: Nested sub-processes & multi-room state
+├── 01_decision_processes.ipynb             # Tutorial 1: State, Operators, & Decision Process mechanics
+├── 02_cogents.ipynb                        # Tutorial 2: Sensors, Actuators, & Perceive-Decide-Act loops
+├── 03_human_cogent_communication.ipynb     # Tutorial 3: Chat UIs, NLU enums, & Intent parsing
+├── 04_hierarchical_decision_processes.ipynb# Tutorial 4: Nested sub-processes & multi-room state
 ├── smart_home_assistant_v1.py                      # Tutorial 1: Basic deterministic device control script
 ├── smart_home_assistant_v2.py                      # Tutorial 2: Full Cogent integration with I/O containers script
 ├── smart_home_assistant_v3.py                      # Tutorial 3: Chat interface & NLU classifier script
@@ -77,13 +76,30 @@ The smart home simulation server runs as an external service that your agent con
 
 ## 🚀 Quickstart Guide
 
+### 0. Install Requirements
+
+In addition to the `cognition` library, you'll need to install packages for the tutorial smart home and language models in your preferred Python (virtual) environment.
+To start:
+
+```bash
+pip install -r smart_home/requirements.txt
+```
+
+Tutorials 3-4 make use of language models - the Polycog library makes use of Pydantic AI to abstract API access, but requires that you then install the appropriate group for your preferred provider. See [Pydantic docs](https://pydantic.dev/docs/ai/models/overview/) for details, but the install for OpenAI would then require...
+
+```bash
+pip install "pydantic-ai-slim[openai]"
+```
+
 ### 1. Set Up Environment Variables
 
-Set your OpenAI API key required for LLM classification components (`EnumClassifier`):
+Tutorials 3-4 make use of language models; by default we've assumed an cloud-based OpenAI model (`gpt-4o`) - if this works with your setup, be sure to make the key is available within your execution environment:
 
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
+
+If you prefer a different model or provider (including a local server), feel free to adjust the supplied code (and environmental variable) to your needs. See [Pydantic docs](https://pydantic.dev/docs/ai/models/overview/) for details.
 
 ### 2. Start the Simulation (Terminal 1)
 
