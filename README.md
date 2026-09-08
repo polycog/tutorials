@@ -31,6 +31,11 @@ This repository is organized into four sequential tutorials that guide you from 
 * **Core Concepts**: Nested `DecisionProcess`
 * **Key Focus**: Scaling agents to complex tasks. Learn how to nest child `DecisionProcess` instances inside parent `Operator` classes to decompose complex tasks (e.g., two-stage verb/noun intent parsing) into modular, isolated sub-loops.
 
+### 🌐 Tutorial 5: World Graphs
+* **Core Concepts**: `WorldGraph`, `describe_facts`, Relational State Representation, Graph Topology, Graph-based Reasoning
+
+* **Key Focus**: Extending state management with graph-based world models. Learn how to construct, query, and dynamically update a `WorldGraph` representing multi-room topology, entity connections, and device hierarchies. Utilize the `describe_facts` function to serialize graph triples and relational knowledge into structured text prompts, enabling grounded response generatior.
+
 ---
 
 ## 🏡 The Smart Home Simulation Environment
@@ -62,10 +67,12 @@ The smart home simulation server runs as an external service that your agent con
 ├── 02_cogents.ipynb                        # Tutorial 2: Sensors, Actuators, & Perceive-Decide-Act loops
 ├── 03_human_cogent_communication.ipynb     # Tutorial 3: Chat UIs, NLU enums, & Intent parsing
 ├── 04_hierarchical_decision_processes.ipynb# Tutorial 4: Nested sub-processes & multi-room state
+├── 05_world_graphs.ipynb                   # Tutorial 5: World graph modeling, describe_facts & spatial reasoning
 ├── smart_home_assistant_v1.py                      # Tutorial 1: Basic deterministic device control script
 ├── smart_home_assistant_v2.py                      # Tutorial 2: Full Cogent integration with I/O containers script
 ├── smart_home_assistant_v3.py                      # Tutorial 3: Chat interface & NLU classifier script
 ├── smart_home_assistant_v4.py                      # Tutorial 4: Production-ready hierarchical agent script
+├── smart_home_assistant_v5.py                      # Tutorial 5: World graph & describe_facts agent script
 ├── utils.py                                        # Cogent runtime loop driver & error suppression policies
 └── smart_home/                                     # Smart Home Simulation Package
     ├── smart_home.py                               # Simulation server (supports default `simple` and `--mode realistic`)
