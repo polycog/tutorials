@@ -38,7 +38,7 @@ This repository is organized into four sequential tutorials that guide you from 
 
 ### 💬 Tutorial 3: Human-Cogent Communication
 * **Agentic AI Concept**: *Language Model* - understanding what the human is asking for by mapping unstructured natural language to structured state representation and API calls.
-* **Core Costructs**: `AutoDocEnum`, `EnumClassifier`, Utterance vs Intent, Separation of Intent Interpretation and Execution
+* **Core Constructs**: `AutoDocEnum`, `EnumClassifier`, Utterance vs Intent, Separation of Intent Interpretation and Execution
 * **Key Focus**: Connecting conversational interfaces (Chat UIs) to an agent. Convert raw, unstructured text into strongly typed enum intents using `EnumClassifier` (built on `pydantic_ai`). Enforce a whitelist security architecture and implement explicit fallback handling for unmapped user inputs.
 
 ### 🏗️ Tutorial 4: Hierarchical Decision Processes
