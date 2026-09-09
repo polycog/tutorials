@@ -1,3 +1,11 @@
+
+
+https://github.com/user-attachments/assets/1e0acd0d-f795-4561-91fa-961dc1dc69a1
+
+
+
+
+
 # `cognition` Smart Home Tutorial Series
 
 Welcome to the tutorial series for the **`cognition`** library. This repository contains step-by-step guides, interactive Jupyter Notebooks, and complete Python reference implementations.
@@ -16,7 +24,8 @@ Imagine managing a dynamic, multi-room environment where natural language user r
 
 Throughout this tutorial series, you will build a Smart Home Assistant from the ground up. You'll start with fundamental state transitions and progress to building a neurosymbolic agent capable of parsing unstructured intent, maintaining a graph representation of room topologies, and executing multi-step tasks.
 
-https://github.com/user-attachments/assets/demo_placeholder.mp4
+https://github.com/user-attachments/assets/ac8bc86f-1e29-44c8-9b96-ef45a08f08c2
+
 
 > Demo Preview: The video above showcases the final agent interpreting natural language requests, querying its internal world graph for relationships, and issuing real-time API commands to devices across a simulated smart home.
 
