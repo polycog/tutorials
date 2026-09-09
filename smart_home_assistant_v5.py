@@ -540,8 +540,9 @@ class ProcessHumanIntent(Operator[HomeState]):
 
 
 class UpdateWorldModel(Operator[HomeState]):
-    """WHEN: there are sensor values that are different from the internal world model
-    THEN: update the world graph to new values"""
+    """ INIT: Initialize an empty list of devices to update
+        WHEN: there are sensor values that are different from the internal world model
+        THEN: update the world graph to new values"""
 
     def __init__(self, name: str, **kwargs: Any) -> None:
         super().__init__(name, **kwargs)
