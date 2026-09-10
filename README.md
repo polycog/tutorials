@@ -18,7 +18,7 @@ Throughout this tutorial series, you will build a Smart Home Assistant from the 
 
 https://github.com/user-attachments/assets/ac8bc86f-1e29-44c8-9b96-ef45a08f08c2
 
-> Demo Preview: The video above showcases the final agent interpreting natural language requests, querying its internal world graph for relationships, and issuing real-time API commands to devices across a simulated smart home.
+> Demo Preview: The video above showcases the Smart Home Assistant interpreting natural language requests, querying its internal world graph for relationships, and issuing real-time API commands to devices across a simulated smart home.
 
 ---
 
