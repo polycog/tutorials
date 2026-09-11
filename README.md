@@ -7,6 +7,13 @@
 
 # `cognition` Smart Home Tutorial Series
 
+<div align="center">
+  <p>
+    <a href="https://polycog.ai" target="_blank">Website</a> &bull;
+    <a href="https://docs.polycog.ai" target="_blank">Docs</a>
+  </p>
+</div>
+
 Welcome to the tutorial series for the **`cognition`** library. This repository contains step-by-step guides, interactive Jupyter Notebooks, and complete Python reference implementations.
 
 ## 📌 Overview
