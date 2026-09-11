@@ -1,6 +1,6 @@
 # `cognition` Smart Home Tutorial Series
 
-<div align="center">
+<div>
   <p>
     <a href="https://polycog.ai" target="_blank">Website</a> &bull;
     <a href="https://github.com/polycog/cognition" target="_blank">cognition</a> &bull;
@@ -12,9 +12,7 @@ Welcome to the tutorial series for the **`cognition`** library. This repository 
 
 ## 📌 Overview
 
-[**`cognition`**]("https://github.com/polycog/cognition") is a neurosymbolic agent framework that combines probabilistic neural processing with deterministic, symbolic, logical reasoning. It is designed for building trustworthy agents that are reliable, steerable, and explainable.`cognition` brings together frontier models and deterministic, symbolic AI.
-
-`cognition` builds upon the classic **Perceive–Decide–Act** agentic loop and provides methods to program intelligent behaviors.
+**`cognition`**] is a [neurosymbolic](https://en.wikipedia.org/wiki/Neuro-symbolic_AI) agent framework that combines stochastic neural processing with deterministic, logical reasoning. It is designed for building trustworthy agents that are reliable, steerable, and explainable.`cognition` brings together frontier models and deterministic, symbolic AI in an integrated architecture. 
 
 ---
 
