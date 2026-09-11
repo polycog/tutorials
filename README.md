@@ -12,7 +12,7 @@ Welcome to the tutorial series for the **`cognition`** library. This repository 
 
 ## 📌 Overview
 
-**`cognition`**] is a [neurosymbolic](https://en.wikipedia.org/wiki/Neuro-symbolic_AI) agent framework that combines stochastic neural processing with deterministic, logical reasoning. It is designed for building trustworthy agents that are reliable, steerable, and explainable.`cognition` brings together frontier models and deterministic, symbolic AI in an integrated architecture. 
+**`cognition`** is a [neurosymbolic](https://en.wikipedia.org/wiki/Neuro-symbolic_AI) agent framework that combines stochastic neural processing with deterministic, logical reasoning. It is designed for building trustworthy agents that are reliable, steerable, and explainable.`cognition` brings together frontier models and deterministic, symbolic AI in an integrated architecture. 
 
 ---
 
