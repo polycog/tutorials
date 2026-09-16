@@ -29,7 +29,7 @@ https://github.com/user-attachments/assets/ac8bc86f-1e29-44c8-9b96-ef45a08f08c2
 
 ## 📚 Tutorial Roadmap
 
-This repository is organized into four sequential tutorials that guide you from core concepts to advanced agent architectures:
+This repository is organized into five sequential tutorials that guide you from core concepts to advanced agent architectures:
 
 ### ⚙️ Tutorial 1: Decision Processes
 * **Agentic AI Concept**: *Orchestration* - co-ordinating and controlling steps in a task.  
