@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/demo_placeholder.mp4
 
 ## 📚 Tutorial Roadmap
 
-This repository is organized into four sequential tutorials that guide you from core concepts to advanced agent architectures:
+This repository is organized into six sequential tutorials that guide you from core concepts to advanced agent architectures:
 
 ### ⚙️ Tutorial 1: Decision Processes
 * **Core Concepts**: `DecisionProcess`, `State`, `Operator`, termination check
@@ -45,8 +45,11 @@ This repository is organized into four sequential tutorials that guide you from 
 ### 🌐 Tutorial 5: World Model
 * **Core Concepts**: `WorldGraph`, `describe_facts`, Relational State Representation, Graph Topology, Graph-based Reasoning
 
-* **Key Focus**: Extending state management with graph-based world models. Learn how to construct, query, and dynamically update a `WorldGraph` representing multi-room topology, entity connections, and device hierarchies. Utilize the `describe_facts` function to serialize graph triples and relational knowledge into structured text prompts, enabling grounded response generatior.
+* **Key Focus**: Extending state management with graph-based world models. Learn how to construct, query, and dynamically update a `WorldGraph` representing multi-room topology, entity connections, and device hierarchies. Utilize the `describe_facts` function to serialize graph triples and relational knowledge into structured text prompts, enabling grounded response generator.
 
+### 🗺️ Tutorial 6: Planning
+- **Core Concepts**: `SearchPlanner`, `WorldEvolver` (action simulation knowledge for reasoning), goals
+- **Key Focus**: Determine a plan - a sequence action sequences to go from current state in the world to a desired outcome. Learn how to define preconditions and effects for actions to generate optimal plans before execution.
 ---
 
 ## 🏡 The Smart Home Simulation Environment
@@ -73,21 +76,23 @@ The smart home simulation server runs as an external service that your agent con
 
 ```
 .
-├── README.md                                       # Main repository documentation
+├── README.md                               # Main repository documentation
 ├── 01_decision_processes.ipynb             # Tutorial 1: State, Operators, & Decision Process mechanics
 ├── 02_cogents.ipynb                        # Tutorial 2: Sensors, Actuators, & Perceive-Decide-Act loops
 ├── 03_human_cogent_communication.ipynb     # Tutorial 3: Chat UIs, NLU enums, & Intent parsing
 ├── 04_hierarchical_decision_processes.ipynb# Tutorial 4: Nested sub-processes & multi-room state
 ├── 05_world_graphs.ipynb                   # Tutorial 5: World graph modeling, describe_facts & spatial reasoning
-├── smart_home_assistant_v1.py                      # Tutorial 1: Basic deterministic device control script
-├── smart_home_assistant_v2.py                      # Tutorial 2: Full Cogent integration with I/O containers script
-├── smart_home_assistant_v3.py                      # Tutorial 3: Chat interface & NLU classifier script
-├── smart_home_assistant_v4.py                      # Tutorial 4: Production-ready hierarchical agent script
-├── smart_home_assistant_v5.py                      # Tutorial 5: World graph & describe_facts agent script
-├── utils.py                                        # Cogent runtime loop driver & error suppression policies
-└── smart_home/                                     # Smart Home Simulation Package
-    ├── smart_home.py                               # Simulation server (supports default `simple` and `--mode realistic`)
-    └── client.py                                   # Socket API client interface (`SmartHomeClient`)
+├── 06_planning.ipynb                       # Tutorial 6: Graph search, succession options, & A* planning
+├── smart_home_assistant_v1.py              # Tutorial 1: Basic deterministic device control script
+├── smart_home_assistant_v2.py              # Tutorial 2: Full Cogent integration with I/O containers script
+├── smart_home_assistant_v3.py              # Tutorial 3: Chat interface & NLU classifier script
+├── smart_home_assistant_v4.py              # Tutorial 4: Production-ready hierarchical agent script
+├── smart_home_assistant_v5.py              # Tutorial 5: World graph & describe_facts agent script
+├── smart_home_assistant_v6.py              # Tutorial 6: SearchPlanner & A* automated planning agent script
+├── utils.py                                # Cogent runtime loop driver & error suppression policies
+└── smart_home/                             # Smart Home Simulation Package
+    ├── smart_home.py                       # Simulation server (supports default `simple` and `--mode realistic`)
+    └── client.py                           # Socket API client interface (`SmartHomeClient`)
 ```
 
 ---
