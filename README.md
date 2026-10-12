@@ -1,24 +1,29 @@
 # `cognition` Smart Home Tutorial Series
 
+<div>
+  <p>
+    <a href="https://polycog.ai" target="_blank">Website</a> &bull;
+    <a href="https://github.com/polycog/cognition" target="_blank">cognition</a> &bull;
+    <a href="https://docs.polycog.ai" target="_blank">Docs</a>
+  </p>
+</div>
+
 Welcome to the tutorial series for the **`cognition`** library. This repository contains step-by-step guides, interactive Jupyter Notebooks, and complete Python reference implementations.
----
 
 ## 📌 Overview
 
-**`cognition`** is a neurosymbolic agent framework that combines probabilistic neural processing with deterministic, symbolic, logical reasoning. It is designed for building trustworthy agents that are reliable, steerable, and explainable.`cognition` brings together frontier models and deterministic, symbolic AI.
-
-`cognition` builds upon the classic **Perceive–Decide–Act** agentic loop and provides methods to program intelligent behaviors.
+**`cognition`** is a [neurosymbolic](https://en.wikipedia.org/wiki/Neuro-symbolic_AI) agent framework that combines stochastic neural processing with deterministic, logical reasoning. It is designed for building trustworthy agents that are reliable, steerable, and explainable.`cognition` brings together frontier models and deterministic, symbolic AI in an integrated architecture.
 
 ---
 
 ## 🤖 What You'll Build
-Imagine managing a dynamic, multi-room environment where natural language user requests ("which device in my kitchen is running, turn the dishawasher off") must translate into reliable, safe, and context-aware device actions.
+Imagine managing a dynamic, multi-room environment where natural language user requests (*"which device in my kitchen is running, turn the dishawasher off"*) must translate into reliable, safe, and context-aware device actions.
 
 Throughout this tutorial series, you will build a Smart Home Assistant from the ground up. You'll start with fundamental state transitions and progress to building a neurosymbolic agent capable of parsing unstructured intent, maintaining a graph representation of room topologies, and executing multi-step tasks.
 
-https://github.com/user-attachments/assets/demo_placeholder.mp4
+https://github.com/user-attachments/assets/ac8bc86f-1e29-44c8-9b96-ef45a08f08c2
 
-> Demo Preview: The video above showcases the final agent interpreting natural language requests, querying its internal world graph for relationships, and issuing real-time API commands to devices across a simulated smart home.
+> Demo Preview: The video above showcases the Smart Home Assistant interpreting natural language requests, querying its internal world graph for relationships, and issuing real-time API commands to devices across a simulated smart home.
 
 ---
 
@@ -27,27 +32,32 @@ https://github.com/user-attachments/assets/demo_placeholder.mp4
 This repository is organized into six sequential tutorials that guide you from core concepts to advanced agent architectures:
 
 ### ⚙️ Tutorial 1: Decision Processes
-* **Core Concepts**: `DecisionProcess`, `State`, `Operator`, termination check
+* **Agentic AI Concept**: *Orchestration* - co-ordinating and controlling steps in a task.
+* **Core Constructs**: `DecisionProcess`, `State`, `Operator`, termination check
 * **Key Focus**: Building deterministic decision processes using `Operator` classes with explicit guard conditions (`can_perform`) and handlers (`perform`). Learn how operators inspect and update internal `State` and how terminal checks conclude the process.
 
 ### 🤖 Tutorial 2: Cogents (Cognitive Agents)
-* **Core Concepts**: `Cogent`, `Sensor`, `Actuator`, Perceive–Decide–Act Loop, `IOContainer`
+* **Agentic AI Concept**: *Agent Harness/Runtime* - driving agent operational loop and handling I/O with the environment.
+* **Core Constructs**: `Cogent`, `Sensor`, `Actuator`, Perceive–Decide–Act Loop, `IOContainer`
 * **Key Focus**: Wrapping a decision process into a `Cogent` instance. Learn how to interface an agent with external environments by creating strongly typed `Sensor` (telemetry ingestion) and `Actuator` (command dispatch) components.
 
 ### 💬 Tutorial 3: Human-Cogent Communication
-* **Core Concepts**: `AutoDocEnum`, `EnumClassifier`, Utterance vs Intent, Separation of Intent Interpretation and Execution
+* **Agentic AI Concept**: *Language Model* - understanding what the human is asking for by mapping unstructured natural language to structured state representation and API calls.
+* **Core Constructs**: `AutoDocEnum`, `EnumClassifier`, Utterance vs Intent, Separation of Intent Interpretation and Execution
 * **Key Focus**: Connecting conversational interfaces (Chat UIs) to an agent. Convert raw, unstructured text into strongly typed enum intents using `EnumClassifier` (built on `pydantic_ai`). Enforce a whitelist security architecture and implement explicit fallback handling for unmapped user inputs.
 
 ### 🏗️ Tutorial 4: Hierarchical Decision Processes
-* **Core Concepts**: Nested `DecisionProcess`
+* **Agentic AI Concept**: *Multi-Agent* - organizing a task into several sub-tasks.
+* **Core Constructs**: Nested `DecisionProcess`
 * **Key Focus**: Scaling agents to complex tasks. Learn how to nest child `DecisionProcess` instances inside parent `Operator` classes to decompose complex tasks (e.g., two-stage verb/noun intent parsing) into modular, isolated sub-loops.
 
 ### 🌐 Tutorial 5: World Model
-* **Core Concepts**: `WorldGraph`, `describe_facts`, Relational State Representation, Graph Topology, Graph-based Reasoning
-
+* **Agentic AI Concept**: *Reasoning* - generating a response via grounding with a graph
+* **Core Constructs**: `WorldGraph`, `describe_facts`, Relational State Representation, Graph Topology, Graph-based Reasoning
 * **Key Focus**: Extending state management with graph-based world models. Learn how to construct, query, and dynamically update a `WorldGraph` representing multi-room topology, entity connections, and device hierarchies. Utilize the `describe_facts` function to serialize graph triples and relational knowledge into structured text prompts, enabling grounded response generator.
 
 ### 🗺️ Tutorial 6: Planning
+* **Agentic AI Concept**: *Chain-of-thought*, *Long-horizon planning* - generating a sequence of actions
 - **Core Concepts**: `SearchPlanner`, `WorldEvolver` (action simulation knowledge for reasoning), goals
 - **Key Focus**: Determine a plan - a sequence action sequences to go from current state in the world to a desired outcome. Learn how to define preconditions and effects for actions to generate optimal plans before execution.
 ---
